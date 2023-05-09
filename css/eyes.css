@@ -1,0 +1,41 @@
+/*	The Copyright Eye
+*/
+#eyeCanvas {
+	top: 100vh;
+	left: 90%;
+	position: fixed;
+
+	z-index: 1900;
+}
+#eyeBackground {
+	width: 300px;
+	height: 300px;
+	top: 100vh;
+	left: 90%;
+	margin-top: -320px;
+	margin-left: -150px;
+	position: fixed;
+	display: block;
+
+	z-index: 2000;
+}
+#divEyeMessage {
+	width: 280px;
+	height: 50px;
+	top: calc(100vh + 4px);
+	left: 90%;
+	margin-top: -320px;
+	margin-left: -140px;
+	padding-top: 212px;
+	position: fixed;
+
+	font-family: Times New Roman, Times, serif;
+	font-size: 15px;
+	line-height: 17px;
+	text-align: center;
+
+	z-index: 6000;
+}
+
+
+

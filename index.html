@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<!-- //表示文件的格式是html -->
+<html lang="en">
+<!-- 设定html语言为英文 -->
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>曾兰淳</title>
+    <!-- 9:标签页的名字编辑 -->
+    <link href="css/font.css" type="text/css" rel="stylesheet"/>
+    <audio id="A&W" src="img/A&W.MP3"></audio>
+      <style>
+        .frame{
+            visibility: hidden;
+            width: 350px;
+            height: 400px;
+            position: absolute;
+            top: 1600px;
+            left: 700px;
+            border-radius: 16px;
+            background-color: #ffffff;
+            box-shadow:  10px 10px 22px #666666,
+                        -10px -10px 22px #ffffff;
+        }
+
+        .list{
+            padding-left: 50px;
+            padding-top: 30px;
+            height: 200px;
+            font-family:'Playfair Display';
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+        }
+       /* 动画 */
+        @keyframes fontSizeChange {
+            from {
+                font-weight: 400;
+            }
+
+            to {
+                font-weight: 700;
+            }
+        }
+        @keyframes blur {
+            from {
+                filter: blur(0px);
+            }
+            1%{
+                filter: blur(5px);
+            }
+            to{
+                filter: blur(6px);
+            }
+        }
+    
+        /* 这里的@是在编写一段p3上发生的动画，这段动画的播放将于后面写的script条件满足后开始 */
+
+        h1 {
+            font-family:'Playfair Display';
+            font-style: normal;
+            font-size: 110pt;
+            font-weight: 450;
+            line-height: 150pt;
+            margin-top: 20pt;
+            color: black;
+        }
+        h2 {
+            font-family:'Playfair Display';
+            font-style: normal;
+            font-size: 80pt;
+            font-weight: 400;
+            line-height: 0pt;
+            color: black;
+        }
+        h2:hover{
+            animation: blur 100s;
+        }
+
+        p2 {
+            font-family:'Playfair Display';
+            font-style: italic;
+            font-size: 30pt;
+            line-height: 100pt;
+        }
+        p {
+            font-family:'Playfair Display';
+            font-style: normal;
+            font-size: 100pt;
+            font-weight: 700;
+            line-height: 10pt;
+            margin-bottom: 80pt;
+            color: black;
+        }
+        p:hover{
+            animation: fontSizeChange 1s;
+        }
+
+        .p3 {
+            font-family:'Playfair Display';
+            font-style: italic;
+            font-size: 16pt;
+            font-weight: 400;
+            line-height: 8pt;
+            height: 28px;
+            width: fit-content;
+            display: inline-flex;
+            color: black;
+            opacity: 0.0;
+            visibility: hidden;
+            transition: 1s 0s linear;
+        }
+
+        p4 {
+            font-family:'Playfair Display';
+            font-style: italic;
+            font-size: 60pt;
+            font-weight: 400;
+            line-height: 50pt;
+            color: black;
+            opacity: 0.0;
+            visibility: hidden;
+            transition: 1.5s linear;
+        }
+        
+        /* p:介绍项目。p3：下拉文字。 */
+        a {
+            text-decoration: none;
+            color: black;
+        }
+        body {
+           margin-left: 100px; 
+           margin-top: 0px;
+           margin-right: 50px;
+           margin-bottom: 200px;
+        }
+        .header{
+            font-family:'Playfair Display';
+            font-style: italic;
+            position: sticky;
+            display:flex;
+            flex-direction: row;
+            justify-content: space-between;
+            font-size: 16pt;
+            line-height: 50pt;
+            top: 0;
+            background-color:white;
+        }
+        .nav{
+            display: flex;
+            justify-content: space-between;
+            width: 300px;
+        }
+
+        /* Menu Stuff
+        */
+        #menu {
+            width: 20%;
+            height: 100vh;
+            top: 0vh;
+            left: 80%;
+            position: absolute;
+
+            font-size: 20px;
+            line-height: 24px;
+            font-family: Arial, Times New Roman, serif;
+
+            color: black;
+
+            z-index: 950;
+        }
+        #listHead{
+            font-family:'Playfair Display';
+            font-style: normal;
+            font-size: 50pt;
+            font-weight: 700;
+            padding-left: 50px;
+            padding-top: 20px;
+        }
+    </style>
+    <!--上面的h1表示下方的颜色和文字对齐设置是关于h1的文本的。-->
+    <link href="css/eyes.css" type="text/css" rel="stylesheet"/>
+    <script src="javascript/eyes.js"></script>
+    <link href="css/datalist.css" type="text/css" rel="stylesheet"/>
+    <link href="css/button.css" type="text/css" rel="stylesheet"/>
+    <link href="css/checklist.css" type="text/css" rel="stylesheet"/>
+</head>
+<!--text-align:文本位置（居中，左右对齐……）-->
+<!--color：文本颜色-->
+<!-- 5-16：一个完整的标签。head定义了整个网页各项内容的外观和样式；
+    <>——</>标志着一个标签的开始和结束（引号的作用） -->
+<!-- <>中间的词语是标签的类型，词语后缀是标签的配置 -->
+
+<body>
+    <div class="frame" id="frame">
+        <div id="listHead">
+            Ability:
+        </div>
+        <div class="list">
+            <label class="material-checkbox">
+                <input type="checkbox">
+                <span class="checkmark"></span>
+                Adobe Series     
+            </label>  
+
+            <label class="material-checkbox">
+                <input type="checkbox">
+                <span class="checkmark"></span>
+                UI design     
+            </label>
+        
+            <label class="material-checkbox">
+                <input type="checkbox">
+                <span class="checkmark"></span>
+                Simple 3D Modeling     
+            </label>
+        </div>
+
+    </div>
+    <!-- on load:打开即执行该函数 -->
+    <div class="header">
+        <div>
+            Featured SCP
+        </div> 
+
+        <div class="nav">
+            <a href="#Self-introduction">
+                <div>
+                    Self-introduction
+                </div>
+            </a>
+
+            <a href="#contact">
+                <div>
+                    Contact
+                </div>
+            </a>
+        </div>
+    </div>
+    <!-- body包含整个网页承载的全部信息与内容，可以插入文字，段落，图片，视频，画板，css，js代码等 -->
+
+    <h1>
+        SCP-zju-239:
+        <br/> Reality distorter
+    </h1>
+    <p2 id="Self-introduction">
+        Self-introduction
+    </p2>
+<br/>
+    <a href="https://scp-wiki-cn.wikidot.com/how-to-write-an-scp">
+        <p id="ob">
+            Object&nbspClass
+        </p>
+    
+        <div class="p3"  id="eu">
+            <div>
+                <del style="padding-right:40px">
+                    Safe
+                </del>
+            </div>
+            
+            <div>
+                Eucild
+            </div>
+        </div>
+    </a>
+
+    <a href="http://scp-wiki-cn.wikidot.com/scp-239">
+        <p id="or">
+            Origin
+        </p>
+
+        <div class="p3" id="ha">
+            <div style="padding-right:40px">
+                Hangzhou
+            </div>
+
+            <div>
+                Apr.1, 2002
+            </div>
+        </div>
+    </a>    
+
+    <a href="https://mp.weixin.qq.com/s/foyCpOZ5J8TdPecEuJ6Tmw">
+        <p id="co">
+            Containment
+        </p>
+        
+        <div class="p3" id="_30">
+            <div style="padding-right:40px">
+                30.2°N-120.1°E
+            </div>
+
+            <div>
+                Zhejiang University
+            </div>
+        </div>
+    </a>
+
+    <a>
+        <p id="ma" onclick="frameAppear(); ">
+            Major
+        </p>
+        
+        <div class="p3" id="ar">
+            <div style="padding-right:40px">
+                Art design
+            </div>
+
+            <div>
+                Visual communication
+            </div>
+        </div>
+    </a>
+    
+    <a href="https://www.16personalities.com/ch/infj-%E4%BA%BA%E6%A0%BC">
+        <p id="la">
+            Labels
+        </p>
+
+        <div class="p3" id="ari">
+            <div style="padding-right:40px">
+                Aries
+            </div>
+
+            <div style="padding-right:40px">
+                INFJ-T
+            </div>
+
+            <div>
+                HSP
+            </div>
+        </div>
+    </a>
+    
+    <p id="add" onclick="play(); ">
+        Addendum#1
+    </p>
+    
+    <div class="p3" id="scp">
+        <div style="padding-right:40px">
+            SCP-zju-239-1
+        </div>
+
+        <div>
+            Lana Del Ray
+        </div>
+    </div>
+
+<br/>
+<br/>
+<div style="display: flex; justify-content:space-between; align-items:center; width:auto;">
+    
+    <!-- 以下是联系方式 -->
+    <p2 id="contact">
+        Contact
+    </p2>
+
+    <!-- 以下是contact标题加输入框 -->
+    <div style="display: flex; justify-content:flex-end; align-items:center; width:auto;">
+        <!-- 以下是datalist部分 -->
+        <div style="margin-right: 40px;">
+        <form class="inputGroup" style="width: fit-content;">
+            <input list="chapters" name="chapter">
+            <datalist id="chapters">
+                <option value="Object Class">
+                <option value="Origin">
+                <option value="Containment">
+                <option value="Major">
+                <option value="Labels">
+                <option value="Addendum#1">
+            </datalist>
+        </form>
+        </div>
+        
+        <!-- 按钮 -->
+        <div>
+            <button style="width: fit-content;" onclick="alert('print complete')">
+                <span>
+                    print
+                </span>
+            </button>
+        </div> 
+    </div>
+</div>
+    <hr>
+
+    <h2 id="email">
+        Email
+    </h2>
+
+    <p4 id="eNum">
+        3200101784@zju.edu.cn
+    </p4>
+    <br/>
+
+    <h2 id="wechat">
+        WeChat  
+    </h2> 
+
+    <p4 id="wNum">
+        wppwprpq
+    </p4> 
+<br/>
+    <h2 id="phone">
+        Phone Number
+    </h2>
+    <p4 id="pNum">
+        17357164207
+    </p4>
+    <script src="./javascript/code.js"></script>
+    <!-- 这里的script是在设置之前写的渐显动画将于鼠标悬停时开始 -->
+     <!-- <script>
+    //     alert("欢迎来到我的主页")
+    // <!/script> -->
+     <!--alert是弹窗-->
+
+    <!-- eye部分 -->
+    <!-- eye canvas:眼球所在画布 -->
+    <!-- eye eyeBackground:眼眶及文字 -->
+    <!-- eye message：基金会标语 -->
+
+    <div>
+        <div id="eyeCanvas">
+            <div id='eyeObject' style='position:absolute; z-index:-6; width: 120; height: 120;'>
+                <img id="irisPic" src="img/copy300.png" width=120 height=120>
+            </div>
+        </div>
+    
+        <div id="eyeBackground">
+            <img id="eyeBackgroundPic" src="img/eye300.png" />
+        </div>
+    
+        <div id="divEyeMessage" onmouseover="showEyeMsg();" onmouseout="hideEyeMsg();">
+            <div id="eyeMsg" style="visibility: hidden;">The Foundation Database<br>is classified</div>
+        </div>
+        <div id="eyeCanvasBackground" style="position: absolute; width: calc(20vw - 30px); height: calc(20vw + 5px); margin-top: calc(100vh - 20vw - 5px); margin-left: calc(80vw + 16px); z-index: 1500;">
+            <div style="width: 100%; height: calc(100% - 15px); background-color: white;"></div>
+        </div>
+    </div>
+
+    <!-- eye的js -->
+    <script>
+        eyeInit();
+    </script>
+
+    <!--	这里是eye的区域-->
+    <div id="menu">
+    </div>
+
+</body>
+
+</html>
